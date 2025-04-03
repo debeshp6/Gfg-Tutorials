@@ -6,14 +6,19 @@ class Solution {
     static ArrayList<Integer> preorder(Node root) {
         // write code here
         ArrayList<Integer> arr = new ArrayList<>();
-        helper(root, arr);
+        helper(root, arr); // recursion
         return arr;
     }
     
-    static void helper(Node root, ArrayList<Integer> arr) {
-        if(root == null) return;
+    
+    // preorder traversal: root - left - right
+    
+    static void helper(Node root, ArrayList<Integer> arr) { // we are creating a helper function here
+        if(root == null) return; // base case
         arr.add(root.data);
-        helper(root.left, arr);
+        helper(root.left, arr); // recursion
         helper(root.right, arr);
+        
+        // helper function is readyyyy !!!!
     }
 }
